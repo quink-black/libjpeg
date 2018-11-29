@@ -41,7 +41,7 @@
 **
 */
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "io/bytestream.hpp"
 #include "io/checksumadapter.hpp"

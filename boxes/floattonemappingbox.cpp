@@ -42,12 +42,12 @@
 **
 */
 
-/// Includes
+#include <string.h>
+
 #include "boxes/floattonemappingbox.hpp"
 #include "io/bytestream.hpp"
 #include "io/memorystream.hpp"
 #include "io/decoderstream.hpp"
-#include "std/stdlib.hpp"
 #include "tools/numerics.hpp"
 ///
 

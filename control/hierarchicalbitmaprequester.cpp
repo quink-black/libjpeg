@@ -831,7 +831,7 @@ void HierarchicalBitmapRequester::ReconstructRegion(const RectAngle<LONG> &orgre
     }
   }
 #else
-  NOREF(region);
+  NOREF(orgregion);
   NOREF(rr);
 #endif
 }

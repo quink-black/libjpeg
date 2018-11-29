@@ -44,6 +44,7 @@
 
 /// Includes
 #include "randomaccessstream.hpp"
+#include <string.h>
 ///
 
 /// RandomAccessStream::PeekMarker

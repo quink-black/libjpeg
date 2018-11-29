@@ -42,13 +42,12 @@
 **
 */
 
-/// Includes
+#include <math.h>
 #include "boxes/parametrictonemappingbox.hpp"
 #include "io/bytestream.hpp"
 #include "io/memorystream.hpp"
 #include "io/decoderstream.hpp"
 #include "tools/numerics.hpp"
-#include "std/math.hpp"
 ///
 
 /// ParametricToneMappingBox::~ParametricToneMappingBox

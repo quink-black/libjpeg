@@ -44,9 +44,7 @@
 /// Includes
 #include "cmd/tmo.hpp"
 #include "cmd/iohelpers.hpp"
-#include "std/stdlib.hpp"
 #include "std/string.hpp"
-#include "std/math.hpp"
 ///
 
 /// Defines

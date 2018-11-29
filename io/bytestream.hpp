@@ -44,11 +44,10 @@
 #ifndef BYTESTREAM_HPP
 #define BYTESTREAM_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "interface/parameters.hpp"
 #include "interface/hooks.hpp"
-#include "std/string.hpp"
 #ifdef EOF
 #undef EOF
 #endif

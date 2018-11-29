@@ -43,13 +43,11 @@
 **
 */
 
-/// Includes
+#include <string.h>
 #include "tools/environment.hpp"
 #include "iostream.hpp"
 #include "interface/parameters.hpp"
 #include "interface/tagitem.hpp"
-#include "tools/debug.hpp"
-///
 
 /// IOStream::IOStream
 // Constructor: build an IOhook structure from an ordinary hook,

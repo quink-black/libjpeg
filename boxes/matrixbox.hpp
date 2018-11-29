@@ -44,9 +44,8 @@
 #ifndef BOXES_MATRIXBOX_HPP
 #define BOXES_MATRIXBOX_HPP
 
-/// Includes
+#include <assert.h>
 #include "std/string.hpp"
-#include "std/assert.hpp"
 #include "boxes/box.hpp"
 ///
 

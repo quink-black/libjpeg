@@ -48,27 +48,10 @@
 #ifndef JPGTYPES_HPP
 #define JPGTYPES_HPP
 
-#include "config.h"
-#ifdef HAVE_STDINT_H
 #include <stdint.h>
-#endif
 
-/// Elementary types
-#if defined(HAS_INT32_T) && defined(HAS_UINT32_T)
 typedef int32_t           JPG_LONG;
 typedef uint32_t          JPG_ULONG;
-#else
-# if SIZEOF_LONG == 4
-typedef signed long int   JPG_LONG;    /* an 32 bit signed integer */
-typedef unsigned long int JPG_ULONG;   /* an 32 bit unsigned integer */
-# elif SIZEOF_INT == 4
-typedef signed int        JPG_LONG;    /* an 32 bit signed integer */
-typedef unsigned int      JPG_ULONG;   /* an 32 bit unsigned integer */
-# else
-#  error "No 32 bit integer type available"
-# endif
-#endif
-///
 
 // Floating point types, available by ANSI.
 // Precision doesn't matter too much

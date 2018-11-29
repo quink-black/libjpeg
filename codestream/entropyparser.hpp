@@ -46,11 +46,10 @@
 #ifndef CODESTREAM_ENTROPYPARSER_HPP
 #define CODESTREAM_ENTROPYPARSER_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "tools/rectangle.hpp"
 #include "interface/imagebitmap.hpp"
-#include "std/assert.hpp"
 ///
 
 /// Forwards

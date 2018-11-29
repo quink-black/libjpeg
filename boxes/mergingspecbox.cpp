@@ -40,7 +40,7 @@
 **
 */
 
-/// Includes
+#include <math.h>
 #include "boxes/mergingspecbox.hpp"
 #include "boxes/namespace.hpp"
 #include "boxes/parametrictonemappingbox.hpp"
@@ -57,7 +57,6 @@
 #include "io/bytestream.hpp"
 #include "io/decoderstream.hpp"
 #include "io/memorystream.hpp"
-#include "std/math.hpp"
 ///
 
 

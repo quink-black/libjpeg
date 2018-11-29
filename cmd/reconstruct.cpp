@@ -43,7 +43,6 @@
 */
 
 /// Includes
-#include "std/stdio.hpp"
 #include "std/string.hpp"
 #include "cmd/reconstruct.hpp"
 #include "cmd/bitmaphook.hpp"

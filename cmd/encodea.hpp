@@ -43,7 +43,6 @@
 #ifndef CMD_ENCODEA_HPP
 #define CMD_ENCODEA_HPP
 
-/// Includes
+#include <stdio.h>
 #include "interface/types.hpp"
-#include "std/stdio.hpp"
 #endif

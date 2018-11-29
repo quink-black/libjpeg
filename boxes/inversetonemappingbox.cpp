@@ -41,12 +41,12 @@
 **
 */
 
-/// Includes
+#include <string.h>
+
 #include "inversetonemappingbox.hpp"
 #include "io/bytestream.hpp"
 #include "io/memorystream.hpp"
 #include "io/decoderstream.hpp"
-#include "std/stdlib.hpp"
 ///
 
 /// InverseToneMappingBox::~InverseToneMappingBox

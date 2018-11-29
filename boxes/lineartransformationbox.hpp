@@ -44,9 +44,8 @@
 #ifndef BOXES_LINEARTRANSFORMATIONBOX_HPP
 #define BOXES_LINEARTRANSFORMATIONBOX_HPP
 
-/// Includes
+#include <assert.h>
 #include "std/string.hpp"
-#include "std/assert.hpp"
 #include "boxes/box.hpp"
 #include "boxes/matrixbox.hpp"
 ///

@@ -40,10 +40,9 @@
 **
 */
 
-/// Includes
+#include <math.h>
 #include "tools/numerics.hpp"
 #include "tools/traits.hpp"
-#include "std/math.hpp"
 ///
 
 /// IEEEDecode(ULONG)

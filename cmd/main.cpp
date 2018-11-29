@@ -45,10 +45,7 @@
 
 /// Includes
 #include "cmd/main.hpp"
-#include "std/stdio.hpp"
-#include "std/stdlib.hpp"
 #include "std/string.hpp"
-#include "std/math.hpp"
 #include "tools/environment.hpp"
 #include "tools/traits.hpp"
 #include "interface/hooks.hpp"

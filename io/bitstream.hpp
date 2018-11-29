@@ -44,7 +44,7 @@
 #ifndef IO_BITSTREAM_HPP
 #define IO_BITSTREAM_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "io/bytestream.hpp"
 #include "tools/checksum.hpp"
@@ -87,7 +87,7 @@ class BitStream : public JObject {
   //
   // Report an error if not enough bits were available, depending on
   // the error flag.
-  void ReportError(void) NORETURN;
+  void ReportError(void);
   //
 public:
   BitStream()

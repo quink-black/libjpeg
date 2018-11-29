@@ -40,10 +40,9 @@
 **
 */
 
-/// Include
+#include <assert.h>
 #include "codestream/decoder.hpp"
 #include "io/bytestream.hpp"
-#include "std/assert.hpp"
 #include "codestream/tables.hpp"
 #include "marker/frame.hpp"
 #include "codestream/image.hpp"

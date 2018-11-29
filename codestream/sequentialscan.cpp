@@ -42,7 +42,7 @@
 **
 */
 
-/// Includes
+#include <assert.h>
 #include "codestream/sequentialscan.hpp"
 #include "codestream/tables.hpp"
 #include "marker/frame.hpp"
@@ -54,7 +54,6 @@
 #include "coding/quantizedrow.hpp"
 #include "codestream/rectanglerequest.hpp"
 #include "dct/dct.hpp"
-#include "std/assert.hpp"
 #include "interface/bitmaphook.hpp"
 #include "interface/imagebitmap.hpp"
 #include "colortrafo/colortrafo.hpp"

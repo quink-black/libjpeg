@@ -40,7 +40,7 @@
 **
 */
 
-/// Includes
+#include <assert.h>
 #include "cmd/encodea.hpp"
 #include "cmd/iohelpers.hpp"
 #include "cmd/main.hpp"
@@ -53,7 +53,4 @@
 #include "interface/tagitem.hpp"
 #include "interface/jpeg.hpp"
 #include "tools/traits.hpp"
-#include "std/math.hpp"
-#include "std/assert.hpp"
 #include "std/string.hpp"
-#include "std/stdlib.hpp"

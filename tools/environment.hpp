@@ -49,16 +49,14 @@
 #ifndef ENVIRONMENT_HPP
 #define ENVIRONMENT_HPP
 
-/// Includes
-#include "config.h"
+#include <assert.h>
+#include <setjmp.h>
+
 #include "interface/types.hpp"
 #include "interface/tagitem.hpp"
 #include "interface/hooks.hpp"
 #include "interface/parameters.hpp"
-#include "std/stdlib.hpp"
-#include "std/setjmp.hpp"
-#include "debug.hpp"
-#define NOREF(x) do {const void *y = &x;y=y;} while(0)
+#define NOREF(x) (void)(x) 
 ///
 
 /// Forward declarations
@@ -190,7 +188,7 @@ extern void Fatal(const char *msg,const char *file,int line);
 ///
 
 /// Defines
-#ifdef HAVE_BUILTIN_EXPECT
+#if 1
 #define likely(x)   __builtin_expect(!!(x), 1)
 #define unlikely(x) __builtin_expect(!!(x), 0)
 #else
@@ -641,13 +639,13 @@ public:
   //
   // Throw an exception
   void Throw(const LONG error, const char *what, const LONG line,
-             const char *where, const char *description) NORETURN;
+             const char *where, const char *description);
   //
   // Throw an exception class directly.
-  void Throw(const class Exception &ex) NORETURN;
+  void Throw(const class Exception &ex);
   //
   // Rethrow the last exception to the next higher hierarchy
-  void ReThrow(void) NORETURN;
+  void ReThrow(void);
   // 
   // Get information about the environment.
   void GetInformation(struct JPG_TagItem *tags) const;

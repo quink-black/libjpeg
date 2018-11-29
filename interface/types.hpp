@@ -53,38 +53,17 @@
 #ifndef TYPES_HPP
 #define TYPES_HPP
 
-#include "config.h"
 #include "jpgtypes.hpp"
-#ifdef HAVE_STDINT_H
 #include <stdint.h>
-#endif
+#include <stdlib.h>
 
 /// Elementary types
-#if defined(HAS_INT8_T) && defined(HAS_UINT8_T)
 typedef int8_t              BYTE;
 typedef uint8_t             UBYTE;
-#else
-# if SIZEOF_CHAR != 1
-#  error "No 8 bit type available"
-# endif
-typedef signed char         BYTE;    /* an 8 bit signed integer */
-typedef unsigned char       UBYTE;   /* an 8 bit unsigned integer */
-#endif
 
-#if defined(HAS_INT16_T) && defined(HAS_UINT16_T)
+
 typedef int16_t             WORD;
 typedef uint16_t            UWORD;
-#else
-# if SIZEOF_SHORT == 2
-typedef signed short int    WORD;    /* an 16 bit signed integer */
-typedef unsigned short int  UWORD;   /* an 16 bit unsigned integer */
-# elif SIZEOF_INT == 2
-typedef signed int          WORD;    /* an 16 bit signed integer */
-typedef unsigned int        UWORD;   /* an 16 bit unsigned integer */
-# else
-#  error "No 16 bit type available"
-# endif
-#endif
 
 // The following are external types.
 typedef JPG_LONG            LONG;    /* an 32 bit signed long */
@@ -105,46 +84,14 @@ typedef double              DOUBLE;
 // The following is not available on every compiler.
 // They might be called differently on your machine, hence you might
 // have to change these...
-#if defined(HAS_INT64_T) && defined(HAS_UINT64_T)
 typedef int64_t             QUAD;
 typedef uint64_t            UQUAD;
 # define HAVE_QUAD
-# if SIZEOF_LONG == 8
+#if defined(__64BIT__) || defined(__LP64__) || defined(_LP64) || defined(_M_IA64)
 #  ifndef IS_64BIT_CODE
 #   define IS_64BIT_CODE
 #  endif
 # endif
-#else
-# if SIZEOF_LONG == 8
-typedef signed long long    QUAD;    /* an 64 bit signed long */
-typedef unsigned long long  UQUAD;   /* an 64 bit unsigned long */
-#  define HAVE_QUAD
-#  ifndef IS_64BIT_CODE
-#   define IS_64BIT_CODE
-#  endif
-# else
-#  if defined(SIZEOF___INT64)
-#   if SIZEOF___INT64 == 8
-typedef __int64             QUAD;
-typedef unsigned __int64    UQUAD;
-#    define HAVE_QUAD
-#   endif
-#  endif
-#  ifndef HAVE_QUAD
-#   if defined(SIZEOF_LONG_LONG)
-#    if SIZEOF_LONG_LONG == 8
-typedef signed long long    QUAD;    /* an 64 bit signed long */
-typedef unsigned long long  UQUAD;   /* an 64 bit unsigned long */
-#     define HAVE_QUAD
-#    endif
-#   endif
-#  endif
-# endif
-#endif
-#ifndef HAVE_QUAD
-# error "No 64 bit integer available"
-#endif
-///
 
 /// Boolean values
 /* boolean values for convenience */
@@ -212,30 +159,6 @@ typedef JPG_CPTR CPTR;
 # define CPTR JPG_CPTR
 #endif
 
-#ifndef NULL
-# ifdef HAS__NULL_TYPE
-#  define NULL (__null)
-# else
-#  define NULL (0)
-# endif
-#endif
-///
-
-/// Aliasing types
-// The following types are copies of the elementary data types that allow
-// aliasing for the "hacky" conversion routines
-#ifdef HAS_MAY_ALIAS
-typedef UBYTE  __attribute((may_alias)) UBYTE_ALIASED;
-typedef BYTE   __attribute((may_alias)) BYTE_ALIASED;
-typedef UWORD  __attribute((may_alias)) UWORD_ALIASED;
-typedef WORD   __attribute((may_alias)) WORD_ALIASED;
-typedef ULONG  __attribute((may_alias)) ULONG_ALIASED;
-typedef LONG   __attribute((may_alias)) LONG_ALIASED;
-typedef UQUAD  __attribute((may_alias)) UQUAD_ALIASED;
-typedef QUAD   __attribute((may_alias)) QUAD_ALIASED;
-typedef FLOAT  __attribute((may_alias)) FLOAT_ALIASED;
-typedef DOUBLE __attribute((may_alias)) DOUBLE_ALIASED;
-#else
 typedef UBYTE  UBYTE_ALIASED;
 typedef BYTE   BYTE_ALIASED;
 typedef UWORD  UWORD_ALIASED;
@@ -246,8 +169,6 @@ typedef UQUAD  UQUAD_ALIASED;
 typedef QUAD   QUAD_ALIASED;
 typedef FLOAT  FLOAT_ALIASED;
 typedef DOUBLE DOUBLE_ALIASED;
-#endif
-///
 
 ///
 #endif

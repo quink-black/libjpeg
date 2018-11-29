@@ -40,7 +40,7 @@
 **
 */
 
-/// Include
+#include <assert.h>
 #include "interface/types.hpp"
 #include "tools/environment.hpp"
 #include "codestream/encoder.hpp"
@@ -51,7 +51,6 @@
 #include "marker/frame.hpp"
 #include "marker/scan.hpp"
 #include "boxes/mergingspecbox.hpp"
-#include "std/assert.hpp"
 ///
 
 /// Encoder::Encoder

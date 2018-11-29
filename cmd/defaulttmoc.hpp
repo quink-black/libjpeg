@@ -49,9 +49,8 @@
 #ifndef CMD_DEFAULTTMOC_HPP
 #define CMD_DEFAULTTMOC_HPP
 
-/// Includes
+#include <stdio.h>
 #include "interface/types.hpp"
-#include "std/stdio.hpp"
 ///
 
 /// Prototypes

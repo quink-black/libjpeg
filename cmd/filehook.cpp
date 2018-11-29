@@ -42,12 +42,11 @@
 */
 
 
-/// Includes
+#include <stdio.h>
 #include "cmd/filehook.hpp"
 #include "interface/hooks.hpp"
 #include "interface/tagitem.hpp"
 #include "interface/parameters.hpp"
-#include "std/stdio.hpp"
 ///
 
 /// The IO hook function

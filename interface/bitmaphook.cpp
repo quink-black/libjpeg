@@ -40,7 +40,7 @@
  *
  */
 
-/// Includes
+#include <assert.h>
 #include "interface/types.hpp"
 #include "interface/bitmaphook.hpp"
 #include "interface/hooks.hpp"
@@ -49,7 +49,6 @@
 #include "marker/component.hpp"
 #include "tools/environment.hpp"
 #include "tools/traits.hpp"
-#include "std/assert.hpp"
 ///
 
 /// BitMapHook::BitMapHook

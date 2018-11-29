@@ -45,13 +45,10 @@
 **
 */
 
-/// Includes
+#include <stddef.h>
 #include "environment.hpp"
 #include "interface/parameters.hpp"
-#include "std/stdlib.hpp"
-#include "std/stddef.hpp"
 #include "std/string.hpp"
-#include "tools/debug.hpp"
 ///
 
 /// Defines
@@ -759,11 +756,7 @@ inline void Environ::CoreFreeMem(void *mem,ULONG bytesize)
       release[3] = m_ReleaseTags[3];
       m_pReleaseHook->CallAPtr(release);
     } else {
-#ifdef HAVE_FREE
       free(mem);
-#else
-      JPG_FATAL("Cannot release memory, no free function and no release hook");
-#endif
     }
   }
 }

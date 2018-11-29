@@ -45,9 +45,8 @@
 #ifndef BOXES_FLOATTRANSFORMATIONBOX_HPP
 #define BOXES_FLOATTRANSFORMATIONBOX_HPP
 
-/// Includes
+#include <assert.h>
 #include "std/string.hpp"
-#include "std/assert.hpp"
 #include "boxes/box.hpp"
 #include "boxes/matrixbox.hpp"
 ///

@@ -46,11 +46,9 @@
 **
 */
 
-/// Includes
+#include <math.h>
 #include "cmd/defaulttmoc.hpp"
 #include "cmd/iohelpers.hpp"
-#include "std/stdio.hpp"
-#include "std/math.hpp"
 ///
 
 /// BuildToneMapping_C

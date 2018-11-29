@@ -41,10 +41,9 @@
 **
 */
 
-/// Includes
+#include <assert.h>
 #include "boxes/mergingspecbox.hpp"
 #include "colortrafo/colortrafo.hpp"
 #include "colortrafo/floattrafo.hpp"
 #include "colortrafo/multiplicationtrafo.hpp"
 #include "tools/numerics.hpp"
-#include "std/assert.hpp"

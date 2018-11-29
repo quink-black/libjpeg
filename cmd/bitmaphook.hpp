@@ -44,9 +44,8 @@
 #ifndef CMD_BITMAPHOOK
 #define CMD_BITMAPHOOK
 
-/// Includes
+#include <stdio.h>
 #include "interface/types.hpp"
-#include "std/stdio.hpp"
 ///
 
 /// Forwards

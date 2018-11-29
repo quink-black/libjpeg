@@ -44,11 +44,10 @@
 #ifndef CODING_HUFFMANSTATISTICS_HPP
 #define CODING_HUFFMANSTATISTICS_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "io/bitstream.hpp"
 #include "std/string.hpp"
-#include "std/assert.hpp"
 #include "coding/huffmantemplate.hpp"
 #ifdef COLLECT_STATISTICS
 #include "std/stdio.hpp"

@@ -46,7 +46,7 @@
 #ifndef TOOLS_PRIORITYQUEUE_HPP
 #define TOOLS_PRIORITYQUEUE_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 ///
 

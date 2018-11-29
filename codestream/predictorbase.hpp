@@ -46,9 +46,8 @@
 #ifndef CODESTREAM_PREDICTORBASE_HPP
 #define CODESTREAM_PREDICTORBASE_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
-#include "std/assert.hpp"
 ///
 
 /// class PredictorBase

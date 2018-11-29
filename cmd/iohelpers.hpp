@@ -44,9 +44,9 @@
 #define CMD_IOHELPERS_HPP
 
 /// Includes
+#include <stdio.h>
+#include <math.h>
 #include "interface/types.hpp"
-#include "std/stdio.hpp"
-#include "std/math.hpp"
 ///
 
 /// Prototypes

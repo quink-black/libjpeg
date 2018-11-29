@@ -42,9 +42,8 @@
 **
 */
 
-/// Includes
+#include <math.h>
 #include "std/string.hpp"
-#include "std/math.hpp"
 #include "tools/environment.hpp"
 #include "marker/quantizationtable.hpp"
 ///

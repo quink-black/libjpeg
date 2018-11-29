@@ -43,9 +43,6 @@
 /// Includes
 #include "cmd/iohelpers.hpp"
 #include "cmd/tmo.hpp"
-#include "std/stdio.hpp"
-#include "std/math.hpp"
-#include "std/stdlib.hpp"
 ///
 
 /// ReadRGBTriple

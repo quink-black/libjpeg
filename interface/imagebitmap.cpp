@@ -45,7 +45,6 @@
 /// Includes
 #include "interface/imagebitmap.hpp"
 #include "tools/traits.hpp"
-#include "std/stddef.hpp"
 ///
 
 /// ImageBitMap::ExtractBitMap

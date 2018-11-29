@@ -41,12 +41,11 @@
  *
  */
 
-/// Includes
+#include <assert.h>
+#include <string.h>
 #include "bytestream.hpp"
 #include "interface/parameters.hpp"
 #include "interface/tagitem.hpp"
-#include "tools/debug.hpp"
-///
 
 /// ByteStream::Read
 LONG ByteStream::Read(UBYTE *buffer,ULONG size)

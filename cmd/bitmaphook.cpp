@@ -41,13 +41,10 @@
 **
 */
 
-/// Includes
+#include <assert.h>
 #include "cmd/bitmaphook.hpp"
 #include "cmd/iohelpers.hpp"
-#include "std/stdio.hpp"
-#include "std/stdlib.hpp"
 #include "std/string.hpp"
-#include "std/assert.hpp"
 #include "tools/traits.hpp"
 #include "interface/hooks.hpp"
 #include "interface/tagitem.hpp"
@@ -61,9 +58,7 @@ JPG_LONG LDRBitmapHook(struct JPG_Hook *hook, struct JPG_TagItem *tags)
   struct BitmapMemory *bmm  = (struct BitmapMemory *)(hook->hk_pData);
   UWORD comp = tags->GetTagData(JPGTAG_BIO_COMPONENT);
   ULONG miny = tags->GetTagData(JPGTAG_BIO_MINY);
-#if CHECK_LEVEL > 0
   ULONG maxy = tags->GetTagData(JPGTAG_BIO_MAXY);
-#endif
   assert(comp < bmm->bmm_usDepth);
   assert(maxy - miny < bmm->bmm_ulHeight); 
   

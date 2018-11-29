@@ -45,11 +45,11 @@
 #ifndef TOOLS_IMAGEBITMAP_HPP
 #define TOOLS_IMAGEBITMAP_HPP
 
-/// Includes
+#include <stddef.h>
+
 #include "interface/types.hpp"
 #include "tools/rectangle.hpp"
 #include "tools/environment.hpp"
-#include "std/stddef.hpp"
 ///
 
 /// Design

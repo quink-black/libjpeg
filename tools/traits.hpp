@@ -47,9 +47,7 @@
 #ifndef TOOLS_TRAITS_HPP
 #define TOOLS_TRAITS_HPP
 
-/// Includes
-#include "config.h"
-#include "std/math.hpp"
+#include <math.h>
 #include "interface/types.hpp"
 ///
 

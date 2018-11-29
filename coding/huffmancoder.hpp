@@ -44,11 +44,10 @@
 #ifndef CODING_HUFFMANCODER_HPP
 #define CODING_HUFFMANCODER_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "io/bitstream.hpp"
 #include "std/string.hpp"
-#include "std/assert.hpp"
 ///
 
 /// class HuffmanCoder

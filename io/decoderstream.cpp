@@ -44,7 +44,7 @@
 **
 */
 
-/// Includes
+#include <string.h>
 #include "tools/environment.hpp"
 #include "decoderstream.hpp"
 #include "interface/parameters.hpp"

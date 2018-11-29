@@ -45,12 +45,11 @@
 #ifndef MARKER_SCAN_HPP
 #define MARKER_SCAN_HPP
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "tools/rectangle.hpp"
 #include "interface/imagebitmap.hpp"
 #include "marker/scantypes.hpp"
-#include "std/assert.hpp"
 ///
 
 /// Forwards

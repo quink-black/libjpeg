@@ -45,7 +45,7 @@
 #define CMD_TMO_HPP
 
 /// Includes
-#include "std/stdio.hpp"
+#include <stdio.h>
 #include "interface/types.hpp"
 ///
 

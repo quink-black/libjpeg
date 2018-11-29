@@ -41,7 +41,7 @@
 **
 */
 
-/// Includes
+#include <string.h>
 #include "boxes/box.hpp"
 #include "boxes/filetypebox.hpp"
 #include "io/bytestream.hpp"

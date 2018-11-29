@@ -40,7 +40,7 @@
 **
 */
 
-/// Includes
+#include <string.h>
 #include "marker/quantization.hpp"
 #include "marker/quantizationtable.hpp"
 #include "io/bytestream.hpp"

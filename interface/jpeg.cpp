@@ -45,7 +45,7 @@
 **
 */
 
-/// Includes
+#include <assert.h>
 #include "tools/environment.hpp"
 #include "interface/tagitem.hpp"
 #include "interface/hooks.hpp"
@@ -63,7 +63,6 @@
 #include "boxes/checksumbox.hpp"
 #include "tools/checksum.hpp"
 #include "io/iostream.hpp"
-#include "std/assert.hpp"
 ///
 
 /// Opaque helper structure for both the environment and the main class.
