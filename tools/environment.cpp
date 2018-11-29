@@ -652,13 +652,9 @@ inline void *Environ::CoreAllocMem(ULONG bytesize,ULONG reqments)
       m_AllocationTags[1].ti_Data.ti_lData = reqments;
       mem = m_pAllocationHook->CallAPtr(m_AllocationTags);
     } else {
-#ifdef HAVE_MALLOC
       mem = malloc(bytesize);
 #if CHECK_LEVEL > 0
       malloccount++;
-#endif
-#else
-      mem = NULL;
 #endif
     }
     // In case no memory is here, throw an exception.
