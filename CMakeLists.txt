@@ -118,7 +118,7 @@ add_library(jpegxt SHARED
 	upsampling/upsamplerbase.cpp
 	upsampling/upsampler.cpp)
 
-add_executable(jpeg
+add_executable(jpeg-xt
 	cmd/bitmaphook.cpp
 	cmd/defaulttmoc.cpp
 	cmd/encodea.cpp
@@ -130,5 +130,5 @@ add_executable(jpeg
 	cmd/reconstruct.cpp
 	cmd/tmo.cpp)
 
-target_link_libraries(jpeg
+target_link_libraries(jpeg-xt
 	jpegxt)
