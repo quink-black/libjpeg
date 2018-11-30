@@ -151,6 +151,7 @@ add_executable(jpeg
 	cmd/tmo.cpp)
 
 target_link_libraries(jpeg
+	-Wl,--start-group
 	jpegbox
 	jpegcodestream
 	jpegcoding
@@ -161,4 +162,5 @@ target_link_libraries(jpeg
 	jpegio
 	jpegmarker
 	jpegtools
-	jpegupsampling)
+	jpegupsampling
+	-Wl,--end-group)
