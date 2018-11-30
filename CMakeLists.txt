@@ -6,7 +6,7 @@ project(libjpeg)
 
 include_directories(.)
 
-add_library(jpegbox STATIC
+add_library(jpegxt SHARED
 	boxes/alphabox.cpp
 	boxes/box.cpp
 	boxes/checksumbox.cpp
@@ -26,9 +26,7 @@ add_library(jpegbox STATIC
 	boxes/parametrictonemappingbox.cpp
 	boxes/refinementspecbox.cpp
 	boxes/superbox.cpp
-	boxes/tonemapperbox.cpp)
-
-add_library(jpegcodestream STATIC
+	boxes/tonemapperbox.cpp
 	codestream/aclosslessscan.cpp
 	codestream/acrefinementscan.cpp
 	codestream/acsequentialscan.cpp
@@ -47,9 +45,7 @@ add_library(jpegcodestream STATIC
 	codestream/sampleinterleavedlsscan.cpp
 	codestream/sequentialscan.cpp
 	codestream/singlecomponentlsscan.cpp
-	codestream/tables.cpp)
-
-add_library(jpegcoding STATIC
+	codestream/tables.cpp
 	coding/actemplate.cpp
 	coding/arithmetictemplate.cpp
 	coding/arthdeco.cpp
@@ -60,9 +56,7 @@ add_library(jpegcoding STATIC
 	coding/huffmanstatistics.cpp
 	coding/huffmantemplate.cpp
 	coding/qmcoder.cpp
-	coding/quantizedrow.cpp)
-
-add_library(jpegcolortrafo STATIC
+	coding/quantizedrow.cpp
 	colortrafo/colortrafo.cpp
 	colortrafo/colortransformerfactory.cpp
 	colortrafo/floattrafo.cpp
@@ -70,9 +64,7 @@ add_library(jpegcolortrafo STATIC
 	colortrafo/lslosslesstrafo.cpp
 	colortrafo/multiplicationtrafo.cpp
 	colortrafo/trivialtrafo.cpp
-	colortrafo/ycbcrtrafo.cpp)
-
-add_library(jpegcontrol STATIC
+	colortrafo/ycbcrtrafo.cpp
 	control/bitmapctrl.cpp
 	control/blockbitmaprequester.cpp
 	control/blockbuffer.cpp
@@ -86,21 +78,15 @@ add_library(jpegcontrol STATIC
 	control/linelineadapter.cpp
 	control/linemerger.cpp
 	control/residualblockhelper.cpp
-	control/residualbuffer.cpp)
-
-add_library(jpegdct STATIC
+	control/residualbuffer.cpp
 	dct/dct.cpp
 	dct/deringing.cpp
 	dct/idct.cpp
-	dct/liftingdct.cpp)
-
-add_library(jpeginterface STATIC
+	dct/liftingdct.cpp
 	interface/bitmaphook.cpp
 	interface/imagebitmap.cpp
 	interface/jpeg.cpp
-	interface/tagitem.cpp)
-
-add_library(jpegio STATIC
+	interface/tagitem.cpp
 	io/bitstream.cpp
 	io/bytestream.cpp
 	io/checksumadapter.cpp
@@ -108,9 +94,7 @@ add_library(jpegio STATIC
 	io/iostream.cpp
 	io/memorystream.cpp
 	io/randomaccessstream.cpp
-	io/staticstream.cpp)
-
-add_library(jpegmarker STATIC
+	io/staticstream.cpp
 	marker/actable.cpp
 	marker/adobemarker.cpp
 	marker/component.cpp
@@ -124,13 +108,9 @@ add_library(jpegmarker STATIC
 	marker/restartintervalmarker.cpp
 	marker/scan.cpp
 	marker/scantypes.cpp
-	marker/thresholds.cpp)
-
-add_library(jpegtools STATIC
+	marker/thresholds.cpp
 	tools/environment.cpp
-	tools/numerics.cpp)
-
-add_library(jpegupsampling STATIC
+	tools/numerics.cpp
 	upsampling/cositedupsampler.cpp
 	upsampling/downsamplerbase.cpp
 	upsampling/downsampler.cpp
@@ -151,16 +131,4 @@ add_executable(jpeg
 	cmd/tmo.cpp)
 
 target_link_libraries(jpeg
-	-Wl,--start-group
-	jpegbox
-	jpegcodestream
-	jpegcoding
-	jpegcolortrafo
-	jpegcontrol
-	jpegdct
-	jpeginterface
-	jpegio
-	jpegmarker
-	jpegtools
-	jpegupsampling
-	-Wl,--end-group)
+	jpegxt)
